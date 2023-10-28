@@ -18,6 +18,9 @@ spring:
           filters:
             - AuthenticationFilter
 
+        - id: portfolio-management
+          uri: lb://PORTFOLIO-MANAGEMENT
+
 eureka:
   client:
     service-url:
