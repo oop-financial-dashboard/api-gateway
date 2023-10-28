@@ -20,6 +20,8 @@ spring:
 
         - id: portfolio-management
           uri: lb://PORTFOLIO-MANAGEMENT
+          predicates:
+            - Path=/api/**
 
 eureka:
   client:
