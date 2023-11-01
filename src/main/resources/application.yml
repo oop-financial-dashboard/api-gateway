@@ -22,6 +22,8 @@ spring:
           uri: lb://PORTFOLIO-MANAGEMENT
           predicates:
             - Path=/api/**
+          filters:
+            - AuthenticationFilter
 
 eureka:
   client:
