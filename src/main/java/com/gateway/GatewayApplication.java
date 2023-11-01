@@ -19,7 +19,7 @@ public class GatewayApplication {
     RouteLocator gatewayRoute(RouteLocatorBuilder builder) {
         return builder.routes()
                 .route("authenticationRoute", routeSpec -> routeSpec
-                        .path("**/api/v1/users/**")
+                        .path("**/api/users/**")
                         .uri("http://localhost:8081/")
                 )
                 .build();

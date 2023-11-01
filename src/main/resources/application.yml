@@ -8,13 +8,13 @@ spring:
         - id: user-management
           uri: lb://USER-MANAGEMENT
           predicates:
-            - Path=/api/v1/auth/**
+            - Path=/api/auth/**
 
         # User-Management Service Route
         - id: user-management
           uri: lb://USER-MANAGEMENT
           predicates:
-            - Path=/api/v1/users/**
+            - Path=/api/users/**
           filters:
             - AuthenticationFilter
 
